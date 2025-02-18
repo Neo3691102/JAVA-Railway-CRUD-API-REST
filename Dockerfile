@@ -12,7 +12,7 @@ FROM eclipse-temurin:21-jre
 ARG port
 ENV PORT=${PORT}
 
-COPY --from=build /app/app.jar
+COPY --from=build /app/app.jar .
 
 RUN useradd runtime
 USER runtime
